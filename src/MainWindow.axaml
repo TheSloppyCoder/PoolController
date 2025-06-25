@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
         x:Class="PoolController.MainWindow"
-        Title="Pool Controller" Width="1024" Height="600" Icon="/img/logo.png" Loaded="Window_OnLoaded">
+        Title="Pool Controller" Width="1024" Height="600" Icon="/img/logo.png" Loaded="Window_OnLoaded" WindowState="FullScreen">
         
     <Window.Background>
         <ImageBrush Source="/img/bg-img.jpg" Stretch="Fill"></ImageBrush>

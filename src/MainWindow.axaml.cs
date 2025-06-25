@@ -38,21 +38,29 @@ public partial class MainWindow : Window
 
     private void InitializeDataFile()
     {
-        if (!File.Exists("data.json"))
+        try
         {
-            DataSettings dataSettings = new DataSettings();
+            if (!File.Exists("data.json"))
+            {
+                DataSettings dataSettings = new DataSettings();
             
-            dataSettings.WeatherData = 0;
-            dataSettings.PumpStartHour = 0;
-            dataSettings.PumpStopHour = 0;
-            dataSettings.WeatherTempTrigger = 0;
-            dataSettings.PoolTempTrigger = 0;
-            dataSettings.ChlorineDate = "2025/01/01";
-            dataSettings.SandDate = "2025/01/01";
+                dataSettings.WeatherData = 0;
+                dataSettings.PumpStartHour = 0;
+                dataSettings.PumpStopHour = 0;
+                dataSettings.WeatherTempTrigger = 0;
+                dataSettings.PoolTempTrigger = 0;
+                dataSettings.ChlorineDate = "2025/01/01";
+                dataSettings.SandDate = "2025/01/01";
 
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string updatedData = JsonSerializer.Serialize(dataSettings, options);
-            File.WriteAllText("data.json", updatedData);
+                var options = new JsonSerializerOptions { WriteIndented = true };
+                string updatedData = JsonSerializer.Serialize(dataSettings, options);
+                File.WriteAllText("data.json", updatedData);
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
+                MsBox.Avalonia.Enums.Icon.Error).ShowAsync();
         }
     }
 

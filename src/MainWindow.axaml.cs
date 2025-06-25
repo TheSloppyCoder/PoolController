@@ -51,9 +51,9 @@ public partial class MainWindow : Window
                 dataSettings.PoolTempTrigger = 0;
                 dataSettings.ChlorineDate = "2025/01/01";
                 dataSettings.SandDate = "2025/01/01";
-
-                var options = new JsonSerializerOptions { WriteIndented = true };
-                string updatedData = JsonSerializer.Serialize(dataSettings, options);
+                
+                
+                string updatedData = JsonSerializer.Serialize(dataSettings, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText("data.json", updatedData);
             }
         }

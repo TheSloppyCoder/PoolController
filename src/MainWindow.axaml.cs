@@ -52,7 +52,6 @@ public partial class MainWindow : Window
                 dataSettings.ChlorineDate = "2025/01/01";
                 dataSettings.SandDate = "2025/01/01";
                 
-                
                 string updatedData = JsonSerializer.Serialize(dataSettings, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText("data.json", updatedData);
             }

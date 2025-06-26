@@ -1,6 +1,6 @@
 ﻿Custom Software License (CC BY-NC 4.0 + Code Clauses)
 
-Copyright (c) 2025 TheSloppyCoder
+Copyright (c) 2025 Fanie Duvenage
 
 This software is licensed under the Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0), 
 with the following clarifications and conditions specific to software usage:

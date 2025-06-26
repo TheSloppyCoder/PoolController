@@ -36,7 +36,6 @@
       <None Remove="img\logo.png" />
       <AvaloniaResource Include="img\logo.png" />
       <None Remove="img\logo1.PNG" />
-      <AvaloniaResource Include="img\logo1.PNG" />
       <None Remove="img\pump.png" />
       <AvaloniaResource Include="img\pump.png" />
       <None Remove="img\pump-bypass.png" />

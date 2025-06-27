@@ -23,7 +23,7 @@
                 <!-- Pump Timing Section -->
                 <StackPanel Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center">
                         <StackPanel>
-                                <Label Content="Pump Timing" HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"/>
+                                <Label Content="Pool Pump Timing" HorizontalAlignment="Center" FontWeight="Bold" FontSize="40"/>
                                 <Separator Background="Snow" Margin="0,20"/>
                                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
                                         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,20,0">
@@ -41,7 +41,7 @@
                 
                 <!-- Weather Temp Section -->
                 <StackPanel Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" Margin="0,0,0,80">
-                        <Label Content="Weather Temp" FontWeight="Bold" FontSize="40"
+                        <Label Content="Weather Temp Trigger" FontWeight="Bold" FontSize="40"
                                HorizontalAlignment="Center"/>
                         <Separator Background="Snow" Margin="0,20"/>
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
@@ -54,7 +54,7 @@
                 
                 <!-- Pool Temp section -->
                 <StackPanel Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center">
-                        <Label Content="Pool Temp" FontWeight="Bold" FontSize="40"/>
+                        <Label Content="Swim Ready Temp" FontWeight="Bold" FontSize="40"/>
                         <Separator Background="Snow" Margin="0,20"/>
                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
                                 <NumericUpDown Name="SpinPoolTemp" Width="130" FontSize="35" Increment="1" 

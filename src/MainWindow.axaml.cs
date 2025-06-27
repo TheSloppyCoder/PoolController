@@ -22,8 +22,8 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        //_gpioController = new GpioController();
-        //_gpioController.OpenPin(_relayPin, PinMode.Output);
+        _gpioController = new GpioController();
+        _gpioController.OpenPin(_relayPin, PinMode.Output);
     }
 
     private void Window_OnLoaded(object? sender, RoutedEventArgs e)

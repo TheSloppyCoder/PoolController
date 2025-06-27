@@ -22,8 +22,8 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        _gpioController = new GpioController();
-        _gpioController.OpenPin(_relayPin, PinMode.Output);
+        //_gpioController = new GpioController();
+        //_gpioController.OpenPin(_relayPin, PinMode.Output);
     }
 
     private void Window_OnLoaded(object? sender, RoutedEventArgs e)
@@ -124,7 +124,7 @@ public partial class MainWindow : Window
                 await msg.ShowAsync();
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
-                    await writer.WriteLineAsync(ex.Message);
+                    await writer.WriteLineAsync(DateTime.Now + " : [GetAndDisplayWeatherData()] : " + ex.Message);
                 }
             }
             await Task.Delay(30000);
@@ -161,6 +161,10 @@ public partial class MainWindow : Window
                         var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
                             MsBox.Avalonia.Enums.Icon.Error);
                         await msg.ShowAsync();
+                        await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
+                        {
+                            await writer.WriteLineAsync(DateTime.Now + " : [TogglePoolPumpRelay() - _gpioController] : " + ex.Message);
+                        }
                     }
                 }
                 else
@@ -180,7 +184,7 @@ public partial class MainWindow : Window
                         await msg.ShowAsync();
                         await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                         {
-                            await writer.WriteLineAsync(ex.Message);
+                            await writer.WriteLineAsync(DateTime.Now + " : [TogglePoolPumpRelay() - _gpioController] : " + ex.Message);
                         }
                     }
                 }
@@ -192,7 +196,7 @@ public partial class MainWindow : Window
                 await msg.ShowAsync();
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
-                    await writer.WriteLineAsync(ex.Message);
+                    await writer.WriteLineAsync(DateTime.Now + " : [TogglePoolPumpRelay()] : " + ex.Message);
                 }
             }
             await Task.Delay(2000);
@@ -246,7 +250,7 @@ public partial class MainWindow : Window
                 await msg.ShowAsync();
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
-                    await writer.WriteLineAsync(ex.Message);
+                    await writer.WriteLineAsync(DateTime.Now + " : [CheckChlorineAndSandDates()] : " + ex.Message);
                 }
             }
             await Task.Delay(5000);
@@ -301,7 +305,7 @@ public partial class MainWindow : Window
                 await msg.ShowAsync();
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
-                    await writer.WriteLineAsync(ex.Message);
+                    await writer.WriteLineAsync(DateTime.Now + " : [CheckAndDisplayPoolTemp()] : " + ex.Message);
                 }
             }
             await Task.Delay(5000);

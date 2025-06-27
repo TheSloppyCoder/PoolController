@@ -77,7 +77,7 @@
                                        <Setter Property="CornerRadius" Value="15"/>
                                </Style>
                                <Style Selector="Button:pointerover ContentPresenter">
-                                       <Setter Property="Background" Value="Cyan"/>
+                                       <Setter Property="Background" Value="Snow"/>
                                </Style>
                        </StackPanel.Styles>
                        

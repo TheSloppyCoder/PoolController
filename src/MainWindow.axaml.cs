@@ -28,7 +28,7 @@ public partial class MainWindow : Window
 
     private void Window_OnLoaded(object? sender, RoutedEventArgs e)
     {
-        InitializeDataFile();
+        InitializeDataFiles();
          _ = GetAndDisplayTime();
          _ = GetAndDisplayWeatherData();
          _ = TogglePoolPumpRelay();
@@ -36,7 +36,7 @@ public partial class MainWindow : Window
          _ = CheckAndDisplayPoolTemp();
     }
 
-    private void InitializeDataFile()
+    private void InitializeDataFiles()
     {
         try
         {
@@ -55,6 +55,9 @@ public partial class MainWindow : Window
                 string updatedData = JsonSerializer.Serialize(dataSettings, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText("data.json", updatedData);
             }
+
+            using StreamWriter file = File.CreateText("log.txt");  // Create log.txt File for logging
+
         }
         catch (Exception ex)
         {
@@ -119,6 +122,10 @@ public partial class MainWindow : Window
                 var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
                     MsBox.Avalonia.Enums.Icon.Error);
                 await msg.ShowAsync();
+                await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
+                {
+                    await writer.WriteLineAsync(ex.Message);
+                }
             }
             await Task.Delay(30000);
         }
@@ -171,6 +178,10 @@ public partial class MainWindow : Window
                         var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
                             MsBox.Avalonia.Enums.Icon.Error);
                         await msg.ShowAsync();
+                        await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
+                        {
+                            await writer.WriteLineAsync(ex.Message);
+                        }
                     }
                 }
             }
@@ -179,6 +190,10 @@ public partial class MainWindow : Window
                 var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
                     MsBox.Avalonia.Enums.Icon.Error);
                 await msg.ShowAsync();
+                await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
+                {
+                    await writer.WriteLineAsync(ex.Message);
+                }
             }
             await Task.Delay(2000);
         }
@@ -229,6 +244,10 @@ public partial class MainWindow : Window
                 var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
                     MsBox.Avalonia.Enums.Icon.Error);
                 await msg.ShowAsync();
+                await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
+                {
+                    await writer.WriteLineAsync(ex.Message);
+                }
             }
             await Task.Delay(5000);
         }
@@ -280,6 +299,10 @@ public partial class MainWindow : Window
                 var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
                     MsBox.Avalonia.Enums.Icon.Error);
                 await msg.ShowAsync();
+                await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
+                {
+                    await writer.WriteLineAsync(ex.Message);
+                }
             }
             await Task.Delay(5000);
         }

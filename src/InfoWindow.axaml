@@ -17,6 +17,7 @@
                 <Label Grid.Column="1" Grid.Row="1" Content="Developed By:" FontSize="40" FontWeight="Bold" VerticalAlignment="Center"/>
                 <Image Grid.Column="2" Grid.Row="1" Source="/img/sloppy-logo.png" Height="300" Margin="0,0,0,0"/>
                 <Label Grid.Column="2" Grid.Row="2" Content="Version   |   V 1.0" FontSize="20" HorizontalContentAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="2" Content="ERROR LOG:" FontSize="20" HorizontalContentAlignment="Left"/>
                 <ScrollViewer Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
                         <TextBlock Name="TxtLog" TextWrapping="Wrap" Text="Error LOG:" Foreground="Black" Background="LightBlue"/>
                 </ScrollViewer>

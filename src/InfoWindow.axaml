@@ -13,12 +13,16 @@
         
         
         <!-- Main Grid -->
-        <Grid ColumnDefinitions="20, *, 20" RowDefinitions="20, 60, *, *, *, 20">
-                <Label Grid.Column="1" Grid.Row="1" Content="Developed By:" FontSize="40" FontWeight="Bold"/>
-                <Image Grid.Column="1" Grid.Row="2" Source="/img/sloppy-logo.png" Height="400" Margin="0,60,0,0"/>
-                <Label Grid.Column="1" Grid.Row="3" Content="Version   |   V 1.0" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Grid ColumnDefinitions="20, *, *, 20" RowDefinitions="20,180,60, *, 140, 20">
+                <Label Grid.Column="1" Grid.Row="1" Content="Developed By:" FontSize="40" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Image Grid.Column="2" Grid.Row="1" Source="/img/sloppy-logo.png" Height="300" Margin="0,0,0,0"/>
+                <Label Grid.Column="2" Grid.Row="2" Content="Version   |   V 1.0" FontSize="20" HorizontalContentAlignment="Center"/>
+                <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Error LOG:" 
+                           Foreground="Black" Background="LightBlue"/>
                 
-                <StackPanel Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                
+                
+                <StackPanel Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"
                             Orientation="Horizontal">
                         <StackPanel.Styles>
                                 <Style Selector="Button">
@@ -30,7 +34,7 @@
                                         <Setter Property="CornerRadius" Value="15"/>
                                 </Style>
                                 <Style Selector="Button:pointerover ContentPresenter">
-                                        <Setter Property="Background" Value="Cyan"/>
+                                        <Setter Property="Background" Value="Snow"/>
                                 </Style>
                         </StackPanel.Styles>
                        

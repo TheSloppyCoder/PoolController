@@ -1,5 +1,5 @@
 ﻿
-# Pool Pump Controller
+# Pool Pump Controller (In Development)
 ### SBC - Based Swimming Pool Pump Controller. <hr/>
 
 This Project controls your swimming Pool Pump autonomously, via a Raspberry Pi SBC.

@@ -1,7 +1,6 @@
 ﻿[Desktop Entry]
 Type=Application
 Name=Pool Controller
-Exec=/home/admin/PoolController/PoolController
-Icon=/home/admin/PoolController/img/logo.png
+Exec=/home/admin/Desktop/run.sh
 Terminal=false
 X-GNOME-Autostart-enabled=true

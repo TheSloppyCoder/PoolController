@@ -17,14 +17,14 @@
                 <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Label Content="Next Chlorine Add Date" FontWeight="Bold" FontSize="40"/>
                         <Separator Background="Snow" Margin="0,30"/>
-                        <DatePicker Name="DatePickerChlorine" HorizontalAlignment="Center" Margin="0,50"/>
+                        <DatePicker Name="DatePickerChlorine" HorizontalAlignment="Center" FontSize="30" Margin="0,40"/>
                 </StackPanel>
                 
                 <!-- Add Sand Section -->
                 <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Label Content="Next Sand Replace Date" FontWeight="Bold" FontSize="40"/>
                         <Separator Background="Snow" Margin="0,30"/>
-                        <DatePicker Name="DatePickerSand" HorizontalAlignment="Center" Margin="0,50"/>
+                        <DatePicker Name="DatePickerSand" HorizontalAlignment="Center" FontSize="30" Margin="0,40"/>
                 </StackPanel>
                 
                 <!-- Button Section -->

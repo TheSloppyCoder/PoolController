@@ -119,9 +119,8 @@ public partial class MainWindow : Window
             }
             catch (Exception ex)
             {
-                var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
-                    MsBox.Avalonia.Enums.Icon.Error);
-                await msg.ShowAsync();
+                ImgWarning.IsVisible = false;
+                ImgWarningOn.IsVisible = true;
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
                     await writer.WriteLineAsync(DateTime.Now + " : [GetAndDisplayWeatherData()] : " + ex.Message);
@@ -158,9 +157,8 @@ public partial class MainWindow : Window
                     }
                     catch (Exception ex)
                     {
-                        var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
-                            MsBox.Avalonia.Enums.Icon.Error);
-                        await msg.ShowAsync();
+                        ImgWarning.IsVisible = false;
+                        ImgWarningOn.IsVisible = true;
                         await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                         {
                             await writer.WriteLineAsync(DateTime.Now + " : [TogglePoolPumpRelay() - _gpioController] : " + ex.Message);
@@ -179,9 +177,8 @@ public partial class MainWindow : Window
                     }
                     catch (Exception ex)
                     {
-                        var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
-                            MsBox.Avalonia.Enums.Icon.Error);
-                        await msg.ShowAsync();
+                        ImgWarning.IsVisible = false;
+                        ImgWarningOn.IsVisible = true;
                         await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                         {
                             await writer.WriteLineAsync(DateTime.Now + " : [TogglePoolPumpRelay() - _gpioController] : " + ex.Message);
@@ -191,9 +188,8 @@ public partial class MainWindow : Window
             }
             catch (Exception ex)
             {
-                var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
-                    MsBox.Avalonia.Enums.Icon.Error);
-                await msg.ShowAsync();
+                ImgWarning.IsVisible = false;
+                ImgWarningOn.IsVisible = true;
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
                     await writer.WriteLineAsync(DateTime.Now + " : [TogglePoolPumpRelay()] : " + ex.Message);
@@ -245,9 +241,8 @@ public partial class MainWindow : Window
             }
             catch (Exception ex)
             {
-                var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
-                    MsBox.Avalonia.Enums.Icon.Error);
-                await msg.ShowAsync();
+                ImgWarning.IsVisible = false;
+                ImgWarningOn.IsVisible = true;
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
                     await writer.WriteLineAsync(DateTime.Now + " : [CheckChlorineAndSandDates()] : " + ex.Message);
@@ -300,9 +295,8 @@ public partial class MainWindow : Window
             }
             catch (Exception ex)
             {
-                var msg = MessageBoxManager.GetMessageBoxStandard("Error !", ex.Message, ButtonEnum.Ok,
-                    MsBox.Avalonia.Enums.Icon.Error);
-                await msg.ShowAsync();
+                ImgWarning.IsVisible = false;
+                ImgWarningOn.IsVisible = true;
                 await using (StreamWriter writer = new StreamWriter("log.txt", append: true))
                 {
                     await writer.WriteLineAsync(DateTime.Now + " : [CheckAndDisplayPoolTemp()] : " + ex.Message);
@@ -363,6 +357,8 @@ public partial class MainWindow : Window
     {
         var info = new InfoWindow();
         info.Show();
+        ImgWarning.IsVisible = true;
+        ImgWarningOn.IsVisible = false;
     }
 
     private async void BtnRestart_OnClick(object? sender, RoutedEventArgs e)

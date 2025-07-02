@@ -53,7 +53,7 @@ chmod + x /home/admin/PoolController/PoolController
 ### 9. Copy the Autostart file to the Raspberry Pi from the setup-files directory:
 1. Make a Directory: ``` mkdir /home/admin/.config/autostart```
 2. In the Cloned repo copy the file "PoolController.desktop" from the setup-files directory.
-3. Paste the file on the Raspberry Pi in the /home/admin/.config/autostart Directory.
+3. Paste the file on the Raspberry Pi in /home/admin/.config/autostart
 
 ### 10. Reboot Raspberry Pi and Test auto start of the App.
 ```

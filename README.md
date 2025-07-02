@@ -36,26 +36,31 @@ This Project controls your swimming Pool Pump autonomously, via a Raspberry Pi S
 git clone https://github.com/TheSloppyCoder/PoolController.git
 ```
 
-### 4. Add your lon lat coordinates in the: ```src/MainWindow.axaml.cs file GetAndDisplayWeatherData() Task```
+### 4. Add your lon lat coordinates in the: ```src/MainWindow.axaml.cs file - GetAndDisplayWeatherData() Task 'url' ```
 
-### 5. Build and Deploy / Publish Project in IDE [self-contained] [linux-arm64].
+### 5. Check out Wiring Diagram at the bottom:
+1. Wire up the Temp sensor to get the DS1820B Temp Sensor Address.
+2. Take note of the Sensor Address: ```/sys/bus/w1/devices/28-xxxxx/w1_slave```
+3. Update the Sensor Address in the ```src/MainWindow.axaml.cs file - CheckAndDisplayPoolTemp() Task 'sensorPath'```
+
+### 6. Build and Deploy / Publish Project in IDE [self-contained] [linux-arm64].
 1. Google or use AI to help how to publish a C# AvaloniaUI Raspberry Pi Project on Rider or Visual Studio.
 
-### 6. Copy over Published Project to Raspberry Pi ```/home/admin/Desktop.```
+### 7. Copy over Published Project to Raspberry Pi ```/home/admin/Desktop.```
 
-### 7. Create a txt file with only the API Key in it (apikey.txt). <br/>
+### 8. Create a txt file with only the API Key in it (apikey.txt). <br/>
 1. Copy the apikey.txt file to the Root Directory of the Published App on the Raspberry Pi.
 
-### 8. Make sure to make the PoolController file - executable.
+### 9. Make sure to make the PoolController file - executable.
 ```
 chmod + x /home/admin/PoolController/PoolController
 ```
-### 9. Copy the Autostart file to the Raspberry Pi from the setup-files directory:
+### 10. Copy the Autostart file to the Raspberry Pi from the setup-files directory:
 1. Make a Directory: ``` mkdir /home/admin/.config/autostart```
 2. In the Cloned repo copy the file "PoolController.desktop" from the setup-files directory.
 3. Paste the file on the Raspberry Pi in /home/admin/.config/autostart
 
-### 10. Reboot Raspberry Pi and Test auto start of the App.
+### 11. Reboot Raspberry Pi and Test auto start of the App.
 ```
 sudo reboot
 ```

@@ -9,7 +9,14 @@ This Project controls your swimming Pool Pump autonomously, via a Raspberry Pi S
 + Control Pool Pump Timing + Based on Weather Condition.
 + Display Current Weather Data from set Location.
 + Has Bypass Control.
-+ Just Being Cool - This Project is Obviously an "Overkill of this type of project." xD
++ Just Being Cool - This Project is Obviously an "Overkill of this type of project." xD 
+<hr/>
+
+## Preview:
+
+<img src="setup-files/dashboard.png" height="350"/>
+<img src="setup-files/settings.png" height="350"/>
+
 <hr/>
 
 ## How to Install: <br/>
@@ -52,5 +59,19 @@ chmod + x /home/admin/PoolController/PoolController
 ```
 sudo reboot
 ```
+
+<hr/>
+
+## Hardware - Wiring Diagram (Check below Steps) :
+
+<img src="setup-files/Wiring%20Diagram.png" height="350">
+
+### Wiring Steps:
+1. Connect DS1820B Temp Sensor to RPI GPIO 4 (4.7K ohm Resistor).
+2. Connect Relay to RPI GPIO 8.
+3. Enable One Wire on the Raspberry Pi with ``` sudo raspi-config ```
+4. Connect Raspberry Pi to 7" HDMI Display -> https://www.waveshare.com/7inch-hdmi-lcd-h.htm
+
+## DONE.
 
 

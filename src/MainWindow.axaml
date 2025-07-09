@@ -107,7 +107,7 @@
                         <Setter Property="CornerRadius" Value="15"/>
                     </Style>
                     <Style Selector="Button:pointerover ContentPresenter">
-                        <Setter Property="Background" Value="#94B4C1"/>
+                        <Setter Property="Background" Value="{Binding Background, RelativeSource={RelativeSource Self}}"/>
                     </Style>
                 </StackPanel.Styles>
                 

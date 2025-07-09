@@ -12,23 +12,30 @@
         </Window.Styles>
         
         <!-- Main Grid -->
-        <Grid ColumnDefinitions="20, *, *, 20" RowDefinitions="20, *, *, 20">
+        <Grid ColumnDefinitions="20, *, *, 20" RowDefinitions="20, 60, 2, *, *, 20">
+                
+                <!-- Title -->
+                <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="SETTINGS 2" FontWeight="Bold" 
+                       FontSize="40" HorizontalContentAlignment="Center"/>
+                
+                <Separator Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Background="Snow" Margin="0,20,0,50"/>
+                
                 <!-- Add Chlorine Section -->
-                <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Label Content="Next Chlorine Add Date" FontWeight="Bold" FontSize="40"/>
+                <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Label Content="Next Chlorine Add Date" FontWeight="Bold" FontSize="30"/>
                         <Separator Background="Snow" Margin="0,30"/>
                         <DatePicker Name="DatePickerChlorine" HorizontalAlignment="Center" FontSize="30" Margin="0,40"/>
                 </StackPanel>
                 
                 <!-- Add Sand Section -->
-                <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Label Content="Next Sand Replace Date" FontWeight="Bold" FontSize="40"/>
+                <StackPanel Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Label Content="Next Sand Replace Date" FontWeight="Bold" FontSize="30"/>
                         <Separator Background="Snow" Margin="0,30"/>
                         <DatePicker Name="DatePickerSand" HorizontalAlignment="Center" FontSize="30" Margin="0,40"/>
                 </StackPanel>
                 
                 <!-- Button Section -->
-                <StackPanel Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                <StackPanel Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
                             VerticalAlignment="Center" Orientation="Horizontal">
                         <StackPanel.Styles>
                                 <Style Selector="Button">
